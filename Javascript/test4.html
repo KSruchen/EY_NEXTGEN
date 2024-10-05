@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+         var user=document.MyForm.username.value;
+         var pass=document.MyForm.password.value;
+         if(user==""&&pass=="")
+         {
+            document.writeln("Please Enter your Username and Password")
+         }
+         else if(pass.length<8){
+            document.write("Please enter above 8 characters")
+         }
+         else{
+            document.write("Usename is"+user+"Password is"+pass)
+         }
+        }
+    </script>
+</head>
+<body>
+    <form name="MyForm" method="post" onsubmit="validate()">
+        Username:<input type="text" name="username"/>
+        Password:<input type="password" name="password"/>
+        <input type="submit" value="submit"/>
+
+
+    </form>
+</body>
+</html>
